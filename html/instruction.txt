@@ -1,0 +1,11 @@
+Start coding!
+
+Create a fake blog using only HTML. You can use one of the Lorem Ipsum generators for dummy text. Your document should use the following tags:
+
+HTML, head, body, title, meta description, a, p, div, ul, li, table (including thead, td, tbody, tr) and span.
+At the bottom of the page, create a fake survey form that uses the following tags:
+form, select, input type="text", input type="checkbox", input type="radio", input type="submit".
+
+During the rest of the bootcamp, you'll get to use these HTML tags a lot. Don't feel pressured to memorize all of these HTML tags and how they exactly work, as you can refer to this section later and you'll feel more comfortable with HTML as you learn more about CSS and other topics in the curriculum. Once you have done the basic assignment, move on to the next chapter and you'll gain a deeper understanding on these HTML tags you've just learned .
+
+Do not take longer than 3-5 hours on this assignment.

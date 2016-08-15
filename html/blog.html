@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Quachio Blog</title>
+        <meta name="description" content="Quachio Programming Blog">
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div id="header">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="top">
+            <h1>CoderCat</h1>
+            <img src="https://octodex.github.com/images/codercat.jpg"
+                 alt="quachio profile image"
+                 height=200
+                 width=200 />
+            <p>This is a site about me. Click below or navigate around!</p>
+            <h2><a href="#">Click this Link</a></h2>
+            <a href="#">Quchio.io</a>
+        </div>
+
+        <div id="main">
+            <p>Vestibulum id facilisis enim. Sed a pulvinar lectus. Ut volutpat
+                tempor lorem vitae sollicitudin. In nec odio ut urna faucibus
+                pellentesque. Aenean non mattis eros. Aliquam massa arcu, varius
+                ut elit at, feugiat egestas enim. Sed vitae tempor
+                justo, non posuere lectus. Nunc eros mauris, posuere ut diam
+                vel, hendrerit feugiat arcu. Integer euismod ipsum et ultricies
+                vulputate. Aliquam euismod id orci volutpat vulputate.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phong Quach</td>
+                        <td>San Jose</td>
+                    </tr>
+                    <tr>
+                        <td>Hung Quach</td>
+                        <td>Oakland</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+            </ul>
+
+            <ol>
+                <li>Ordered List 1</li>
+                <li>Ordered List 2</li>
+            </ol>
+        </div>
+
+        <div id="survey">
+            <form action="action.php" method="post">
+                <h4>Pick a computer</h4>
+                <button>Mac</button>
+                <button>PC</button>
+
+                <h4>Rating</h4>
+                <select name="rating">
+                    <option value="sunnyvale">meh</option>
+                    <option value="mountain_view">nice</option>
+                    <option value="san_jose">awesome</option>
+                </select>
+
+                <h4>Info</h4>
+                <label>First Name:</label>
+                <input type="text" name="first_name" placeholder="first">
+                <label>Last Name: </label>
+                <input type="text" name="last_name" placeholder="last">
+                <label>Email address:</label>
+                <input type="email" name="email" placeholder="email">
+
+                <h4>Comments</h4>
+                <textarea rows="2" name="comments"></textarea>
+
+                <h4>Gender</h4>
+                <input type="radio" name="gender" value="male">
+                <label>Male</label>
+                <input type="radio" name="gender" value="female">
+                <label>Female</label>
+
+                <h4>Select some boxes</h4>
+                <input type="checkbox" value="option1">
+                <label>Box 1</label>
+                <input type="checkbox" value="option2">
+                <label>Box 2</label>
+
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+
+    </body>
+
+</html>
