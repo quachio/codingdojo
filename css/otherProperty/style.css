@@ -1,0 +1,10 @@
+ul{
+  list-style-image : url('star.gif');
+}
+
+a{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration: underline;
+}
