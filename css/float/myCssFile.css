@@ -1,0 +1,14 @@
+#wrapper{
+  width:960px;
+  background-color:yellow;
+}
+.content{
+  width: 220px;
+  height: 100px;
+  margin-bottom: 10px;
+  background-color:orange;
+  float: left;
+}
+.clear {
+    clear: both;
+}

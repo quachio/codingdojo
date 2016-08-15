@@ -1,1 +1,48 @@
 DOM - Document Object Model
+
+come at 8:30
+9:00 Alogrimth Problem Solving
+10:15 Lecture
+11:00 Group
+Lunch whatever you want, just make sure to come before 1pm for lecture
+Every Thursday, Guest Speaker.
+Leave at 5pm
+
+Week1
+-----------
+html
+css
+yellow belt
+
+Week 2
+-----------
+jQuery
+git/github
+mysql -> database use for python
+
+Week 3
+---------
+mysql
+project - Presenting Project, Portfolio
+
+HTTP REQUEST
+
+Browser/ Client -> HTTP/HTTPS Request -> IP of Server (Computer)
+[cnn.com] -> DNS -> SERVER
+
+MEAN -> Mongo->Express->Angular->Node
+
+Server - Backend
+-------------------
+Webserver   -> NODEJS (note you can use two type of technologies)
+Interperter -> Express aka Javascripts
+Database    -> Mongo (note you can use mongo and sql)
+
+
+HTTP Response -> what happen the server response back
+
+Client - Frontend
+----------------------
+html
+CSS
+JAVASCRIPT -> Angular

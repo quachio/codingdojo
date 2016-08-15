@@ -1,0 +1,24 @@
+p{
+	background-color: grey;
+	display: inline;
+}
+a{
+	background-color: yellow;
+	/*display: block;*/
+}
+ul{
+	background-color: blue;
+	display: inline;
+}
+ul li{
+	background-color: green;
+	display: inline;
+}
+
+#nav-menu {
+	list-style-type: none; /* this get rid of the bullet */
+}
+
+#nav-menu li {
+	display: inline;
+}
