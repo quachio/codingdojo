@@ -21,6 +21,19 @@
     display: inline-block;
 }
 
+.navigation a {
+    text-decoration: none;
+    color: blue;
+}
+
+.navigation ul li a {
+    color: blue;
+}
+
+.navigation a:hover {
+    color: red;
+}
+
 .navigation p {
     margin: 0;
     padding: 0;
@@ -40,9 +53,8 @@
     color: blue;
 }
 
-#redArticle {
-    color: red;
-}
+
+
 
 .main_content {
     width: 700px;

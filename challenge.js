@@ -160,9 +160,45 @@ console.log(noNeg([1, 5, 10, -2]));
    original array. (e.g. [1,5,10,-2] will return [10,-2,3.5])
  */
  function maxMinAvg(arr) {
-     var max = 0;
-     var min = 0;
+     var max = arr[0];
+     var min = arr[0];
      var avg = 0;
      var arrnew = [];
+     for(var i = 0; i < arr.length; i++) {
+         if(arr[i] > max) {
+             max = arr[i];
+         } else if (arr[i] < min) {
+             min = arr[i];
+         }
+         avg += arr[i];
+     }
+
+     arrnew.push(max);
+     arrnew.push(min);
+     arrnew.push(avg / arr.length);
      return arrnew;
  }
+
+console.log(maxMinAvg([1, 5, 10, -2]));
+
+/**
+ * Swap values
+   Write a function that will swap the first and last values of any given array.
+   The default minimum length of the array is 2. (e.g. [1,5,10,-2] will become
+   [-2,5,10,1]).
+ */
+function swap(arr) {
+    var arrnew = arr;
+    var last = arr.length - 1;
+    var first = 0;
+    var temp;
+    if( arr.length >= 2) {
+        temp = arr[first];
+        arrnew[first] = arr[last];
+        arrnew[last] = temp;
+    }
+
+    return arrnew;
+}
+
+console.log(swap([1, 5, 10, -2]));
