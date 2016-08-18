@@ -1,0 +1,163 @@
+/* Navigation */
+
+body {
+    font-family: arial;
+}
+.nav {
+    text-align: right;
+}
+.nav ul {
+    border-left: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    vertical-align: top;
+}
+.nav ul li {
+    display: inline-block;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: #807F83;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.nav ul li span {
+    color: #DCDCDC;
+}
+.nav input {
+    display: inline-block;
+}
+.nav button {
+    background-color: #0066ff;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+/* Header */
+
+.header h1 {
+    display: inline-block;
+    font-size: 2.5em;
+    color: #807F83;
+    position: relative;
+    top: -12px;
+}
+.header span {
+    color: #1E90FF;
+}
+.header h2 {
+    background-color: #1E90FF;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 5px #0066ff;
+}
+
+/* Sidebar */
+
+.sidebar {
+    display: inline-block;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 50px;
+    vertical-align: top;
+}
+.sidebar h3 {
+    color: #0066ff;
+}
+.sidebar h4 {
+    color: orange;
+}
+
+.leftads {
+    margin: 0;
+    width: 300px;
+    height: 365px;
+    background: url("left_content_ad1.png") no-repeat;
+}
+
+.leftads h3 {
+    font-size: 1.7em;
+    color: #0066ff;
+    padding: 12px;
+    line-height: 120%;
+}
+
+.leftads p {
+    line-height: 150%;
+    padding: 0px 15px 15px 15px;
+    font-size: 1.2em;
+}
+
+.leftads button {
+    background-color: #0066ff;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+/* Main */
+
+.main {
+    display: inline-block;
+    width: 950px;
+    margin-left: 40px;
+}
+
+.main img {
+}
+
+
+.banner {
+    background-color: grey;
+}
+
+.banner img {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.banner h1 {
+    background-color: yellow;
+    display: inline-block;
+}
+
+
+.banner div {
+    width: 800px;
+    background-color: blue;
+    display: inline-block;
+}
+
+.banner div p {
+    background-color: red;
+    word-wrap: break-word;
+
+}
+
+
+.test {
+    background-color: yellow;
+}
