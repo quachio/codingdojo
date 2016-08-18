@@ -4,6 +4,7 @@ html, body {
 }
 .container {
     max-width: 1300px;
+    min-width: 1300px;
     margin: 0 auto;
     /* background-color: #c1c1c1; */
     /*padding: 20px;*/
@@ -195,6 +196,10 @@ html, body {
 }
 .main-content h4 {
     padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: #25739F;
+    font-weight: bold;
 }
 .main-content img {
     vertical-align: top
@@ -239,6 +244,7 @@ html, body {
 }
 .main-content p {
     font-size: .8em;
+    line-height: 1.3;
 }
 #topA {
     vertical-align: top;
@@ -298,4 +304,5 @@ html, body {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
+    border: 1px solid #6F834B;
 }
