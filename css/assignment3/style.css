@@ -1,0 +1,39 @@
+/* reset */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Tahoma";
+}
+
+/* wrapper */
+
+#wrapper {
+    width: 960px;
+    margin: 0px auto;
+    background-color: red;
+    padding: 10px;
+}
+
+/* header */
+
+#header {
+    height: 150px;
+    background-color: blue;
+}
+#header ul {
+    display: inline-block;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    border-color: #f2f2f2;
+    width: 350px;
+    padding: 2px 5px 5px 5px;
+    margin-left: 450px;
+}
+#header ul li {
+    display: inline;
+    font-size: small;
+    padding-top: 2px 7px 0px 7px;
+    color: grey;
+        
+}

@@ -61,6 +61,10 @@ html, body {
     position: relative;
     vertical-align: top;
     top: -6px;
+    color: #818183;
+}
+.header h1 span {
+    color: #0083AA;
 }
 .header h2 {
     background-color: #2779bb;
