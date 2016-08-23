@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery demo!</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+
+
+                // Focus Method
+                $("input").focus(function() {
+
+                    $("span").css("display", "inline-block").fadeOut(2000)
+                });
+
+                $('button').click(function() {
+                    console.log('button works');
+                    var parent = $(this).parent().attr('id');
+                    // console.log(parent);
+                    if (parent === 'click') {
+                        alert('Hello World');
+                    } else if (parent === 'addClass') {
+                        // var next = $(this).parent().next().children('p').addClass('red');
+                        //console.log(next);
+                        var test = $(this).parent().next().children().attr('class');
+                        console.log(test);
+                        if (test === undefined) {
+                            $(this).parent().next().children('p').addClass('red');
+                        } else if (test === 'red') {
+                            $(this).parent().next().children('p').removeAttr('class');
+                        }
+                    } else if (parent === 'val') {
+                        console.log('val');
+                        var singleValues = $("#single").val();
+                        console.log(singleValues);
+                        var valTest = $(this).parent().next().children('select').val();
+                        $(this).parent().next().children('p').text(valTest);
+                        console.log(valTest);
+                    } else if (parent === 'text') {
+                        console.log('text method');
+                        $(this).parent().next().children().next().text('Yellow');
+                    } else if (parent === 'attr') {
+                        console.log('attr');
+                        var attrValue = $(this).parent().next().children('p').attr('class');
+                        console.log(attrValue);
+                        $(this).parent().next().children().next().text(attrValue);
+                    } else if (parent === 'html') {
+                        console.log('html');
+                        var testHtml = $(this).parent().next().children('p').html('<i>Coding</i>');
+                        console.log(testHtml);
+                        $(this).parent().next().children('p').html()
+                    } else if (parent === 'data') {
+                        console.log('data');
+                        $(this).parent().next().children("div").data("test", {firstName: "Hung", lastName: "Quach"});
+                        var testData = $(this).parent().next().children('div').data();
+                        console.log(testData['test'].firstName);
+
+                        console.log($(this).parent().next().children().children('#first').text(testData['test'].firstName));
+                        console.log($(this).parent().next().children().children('#last').text(testData['test'].lastName));
+
+
+
+                    }
+                });
+
+            });
+
+        </script>
+    </head>
+
+    <body>
+
+
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Assignment I: jQuery Function</div>
+            <div class="panel-body">
+                <p>Create a web page that uses the following jQuery functions: Don't randomly start writing jQuery and find elements to attach jQuery code to. Think about what each function could be useful for! This is an assignment that previous students
+                    have often reverted back to so as to brush up on their jQuery in later weeks! Use the mockup as motivation, but feel free to embellish!
+                </p>
+            </div>
+            <!-- List group -->
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">.click</h1>
+                        <ul class="list-inline">
+                            <li id="click">
+                                <button class="btn btn-primary">Click</button>
+                            </li>
+                            <li>
+                                <p>Click the button, to show a alert message hello world</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">.addClass</h1>
+                        <ul class="list-inline">
+                            <li id="addClass">
+                                <button class="btn btn-primary">AddClass</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">.focus</h1>
+                        <ul class="list-inline">
+
+                            <li>
+                                <input>
+
+                                <span id="testFocus">Nice to meet you!</span>
+                                <p>Click in the input field to get focus.</p>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">.val</h1>
+                        <ul class="list-inline">
+                            <li id="val">
+                                <button class="btn btn-primary">Val</button>
+                            </li>
+                            <li>
+                                <select id="single">
+                                    <option>Single</option>
+                                    <option>Single2</option>
+                                </select>
+                                <p>Test</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">.text</h1>
+                        <ul class="list-inline">
+                            <li id="text">
+                                <button class="btn btn-primary">.text()</button>
+                            </li>
+                            <li>
+                                <p>Click the button to change the Red text to Yellow</p>
+                                <p>Red</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">.attr</h1>
+                        <ul class="list-inline">
+                            <li id="attr">
+                                <button class="btn btn-primary">attr()</button>
+                            </li>
+                            <li>
+                                <p class="pinkText">Click the button to show the atrribue of this paragraph</p>
+                                <p></p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">.html</h1>
+                        <ul class="list-inline">
+                            <li id="html">
+                                <button class="btn btn-primary">.html</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">.data</h1>
+                        <ul class="list-inline">
+                            <li id="data">
+                                <button class="btn btn-primary">.data()</button>
+                            </li>
+                            <li>
+                                <div>
+                                    The values stored were
+                                    <span id="first"></span> and
+                                    <span id="last"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="panel-body">
+                        <h1 class="text-center">Add Class</h1>
+                        <ul class="list-inline">
+                            <li>
+                                <button class="btn btn-primary">Add Class</button>
+                            </li>
+                            <li>
+                                <p>Click the button to add class "red" to this paragraph</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- end of panel contents -->
+
+        <!-- <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                <h3 class="panel-title">Click</h3>
+            </div>
+            <div class="panel-body">
+                <h1 class="text-center">Add Class</h1>
+                <ul class="list-inline">
+                    <li>
+                        <button class="btn btn-primary">Add Class</button>
+                    </li>
+                    <li>
+                        <p>Click the button to add class "red" to this paragraph</p>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+
+
+    </body>
+
+</html>

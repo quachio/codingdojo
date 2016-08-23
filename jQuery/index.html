@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery demo!</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+                var dojo = 'message for the console';
+                var dojos = ['dojo', 'mountain', 'test'];
+                console.log(dojo);
+                console.log(dojos);
+
+                $('p, h4').hide();
+
+                alert('Using jQuery()');
+                console.log("Hello");
+                $('h4').click(function(){
+                    alert('hello');
+                })
+                // Basic
+
+
+                $('a').click(function() {
+                    alert('you are now leaving the page!');
+                })
+
+                $('#hide').click(function(){
+                    $('p').hide(); // Effect Method
+                })
+
+                $('#show').click(function(){
+                    $('p').show(); // Effect Method
+                })
+
+                // manipluation methods, add either text or html
+                $('h3').hover(function(){ // hover functino allow two input
+                    $('h2').text("go see the Space Needle");
+                }, function(){
+                    // alert('now invoking the second function')
+                });
+
+                $('.append').click(function(){
+                    $('.result').append('<h4>.append add HTML! </h4>');
+                })
+
+                // Css Method
+                $('button').click(function(){
+                    $('button').css('background-color', 'yellow');
+                })
+
+                // Getter and Settter
+
+            });
+        </script>
+    </head>
+    <body>
+        <h4>CLick me!</h4>
+        <h4>Click me two</h4>
+
+        <p>This is a paragraph!</p>
+        <p>This is also a paragraph!</p>
+        <button id="hide">This will hide all paragraph</button>
+        <button id="show">Click to show all paragraph</button>
+        <a href="http://www.google.com" id="mylink">go to Google!</a>
+        <h3>Mountain View, California</h3>
+        <h2>Seattle, Washingto</h2>
+        <button class="append">Click to see .append work!</button>
+        <div class="result"></div>
+
+
+    </body>
+</html>
