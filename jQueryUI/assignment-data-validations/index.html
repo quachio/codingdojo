@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment: Sortable Ninja</title>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.js" integrity="sha256-6HSLgn6Ao3PKc5ci8rwZfb//5QUu3ge2/Sw9KfLuvr8="
+            crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+
+
+                $('form').submit(function(){
+
+                    if ($('input#name').val() == '') {
+                        console.log($(this).children().children().last().append('<span class="error">Your name can be blank</span>'));
+                        // $('input#name').append('<span>Your name can be blank</span>');
+                        return false;
+                    } else {
+                        var message = 'Thanks ' +
+                            $('input#name').val() +
+                            ' Your Cruise leaves on ' +
+                            $('input#from').val() +
+                            ' and returns on ' + $('input#to').val();
+
+                        alert(message);
+                        return false;
+                    }
+
+
+                });
+
+
+
+                $(function() {
+                    var dateFormat = "mm/dd/yy";
+
+                    var from = $("#from").datepicker({
+                        defaultDate: "+1w",
+                        changeMonth: true,
+                        numberOfMonths: 3,
+                    }).on("change", function() {
+                        console.log('from date:');
+                        to.datepicker("option",
+                            "minDate", getDate(this)
+                        );
+                        console.log(this.value);
+                        // $(this).val('From: ' + this.value);
+
+                    });
+
+                    var to = $("#to").datepicker({
+                            defaultDate: "+1w",
+                            changeMonth: true,
+                            numberOfMonths: 3,
+                        })
+                        .on("change", function() {
+                            console.log('to date:');
+                            from.datepicker("option",
+                                "maxDate", getDate(this)
+                            );
+                        });
+
+                    function getDate(element) {
+                        var date;
+                        try {
+                            date = $.datepicker.parseDate(
+                                dateFormat, element.value);
+                            console.log('getData ' + date);
+                        } catch (error) {
+                            date = null;
+                        }
+                        return date;
+                    }
+                });
+            });
+
+        </script>
+        <style media="screen">
+            li {
+                list-style-type: none;
+                padding: 10px;
+            }
+            .error {
+                color: red;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <form action="">
+            <ul>
+                <li>
+                    <input type="text" id="from" name="from" placeholder="Form:">
+                </li>
+                <li>
+                    <input type="text" id="to" name="to" placeholder="To:">
+                </li>
+                <li>
+                    <input type="text" id="name" name="name" placeholder="Name:">
+                </li>
+                <li>
+                    <button class="ui-button ui-widget ui-corner-all">Check dates</button>
+                </li>
+            </ul>
+        </form>
+
+
+
+    </body>
+
+</html>
