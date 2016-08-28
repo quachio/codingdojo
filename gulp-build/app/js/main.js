@@ -12,6 +12,5 @@ $(document).ready(function(){
     console.log("hello world");
     console.log("this is a test");
     $('p').text('FUCK ME');
-    $('body').css("background-color","blue");
-
+    $('body').css("background-color","white");
 });
