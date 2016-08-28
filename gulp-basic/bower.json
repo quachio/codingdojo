@@ -1,0 +1,22 @@
+{
+  "name": "gulp-dojo",
+  "homepage": "https://github.com/quachio/gulp-dojo",
+  "authors": [
+    "quachio <quachio@icloud.com>"
+  ],
+  "description": "Coding Dojo CSS HTML JQUERY Angular and Bootstrap build system",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
