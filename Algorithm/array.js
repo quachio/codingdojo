@@ -1,19 +1,19 @@
 function pushToFront(arr, v) {
-    for(var i = arr.length; i > 0; i--) {
+    for (var i = arr.length; i > 0; i--) {
         arr[i] = arr[i - 1];
     }
     arr[i] = v;
     console.log(arr);
 }
 
-pushToFront([1,3,4], 4);
+pushToFront([1, 3, 4], 4);
 
 function pushToBack(arr, v) {
     arr[arr.length] = v;
     console.log(arr);
 }
 
-pushToBack([1,3,4], 4);
+pushToBack([1, 3, 4], 4);
 
 
 function removeMiddle(arr) {
@@ -24,10 +24,10 @@ function removeMiddle(arr) {
     }
 
     var middleIndex = Math.floor(arr.length / 2);
-    for(var i = middleIndex; i < arr.length - 1; i++) {
+    for (var i = middleIndex; i < arr.length - 1; i++) {
         var temp = arr[i];
         arr[i] = arr[i + 1];
-        arr[i+1] = temp;
+        arr[i + 1] = temp;
         console.log(arr);
     }
     arr.pop();
@@ -133,3 +133,51 @@ function intermediateSum(arr) {
 }
 
 intermediateSum([1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]);
+
+function isCreditCardValid(digitArr) {
+
+    console.log(digitArr, digitArr.length);
+
+    if (digitArr.length < 13 || digitArr.length > 19) {
+        console.log(false, "Invalid Credit Card Nub");
+        return false;
+    }
+
+    var lastDigit = digitArr.pop();
+    var sum = 0;
+    console.log(lastDigit, "lastDigit");
+
+    for (var i = digitArr.length - 1; i >= 0; i--) {
+
+        if (i % 2 === 1) {
+            digitArr[i] *= 2;
+            if (digitArr[i] > 9) {
+                digitArr[i] -= 9;
+            }
+        }
+
+        sum += digitArr[i];
+
+    }
+    console.log(digitArr);
+
+    console.log(sum);
+    console.log(lastDigit);
+    sum += lastDigit;
+    console.log(sum);
+
+    if (sum % 10 === 0) {
+        console.log(sum);
+        console.log(true);
+        return true;
+    } else {
+        console.log(false);
+        return false;
+    }
+
+
+
+}
+
+// isCreditCardValid([4, 9, 8, 0, 1, 0, 2, 9, 7, 8, 4, 1, 12, 14]);
+isCreditCardValid([5,2,2,8,2]);
