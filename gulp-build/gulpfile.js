@@ -1,34 +1,42 @@
 /******************************************************************************
  * Required
  *****************************************************************************/
-
-var gulp   = require('gulp');
-var uglify = require('gulp-uglify');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var rename = require('gulp-rename')
-var plumber = require('gulp-plumber');
-var autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    plumber = require('gulp-plumber'),
+    autoprefixer = require('gulp-autoprefixer'),
+    browserSync = require('browser-sync'),
+    reload = browserSync.reload,
+    autoClose = require('browser-sync-close-hook');
 
 /******************************************************************************
  * browserSync Task
  *****************************************************************************/
 gulp.task('browser-sync', function() {
+    browserSync.use({
+      plugin() {},
+      hooks: {
+        'client:js': autoClose,
+      },
+    });
     browserSync({
         server: {
-            baseDir: "./app/"
+            baseDir: "./app/",
         },
-        browser: ["google chrome", "safari"]
-    })
+        browser: ["google chrome", "safari"],
+    });
 });
 
 /******************************************************************************
  * HTML Task
  *****************************************************************************/
 
-gulp.task('html', function(){
+gulp.task('html', function() {
     gulp.src('app/**/*.html')
-    .pipe(reload({stream:true}));
+        .pipe(reload({
+            stream: true
+        }));
 });
 
 
@@ -36,9 +44,11 @@ gulp.task('html', function(){
  * CSS Task
  *****************************************************************************/
 
-gulp.task('css', function(){
+gulp.task('css', function() {
     gulp.src('app/css/**/*.css')
-    .pipe(reload({stream:true}));
+        .pipe(reload({
+            stream: true
+        }));
 
 });
 
@@ -46,13 +56,17 @@ gulp.task('css', function(){
  * Script Task
  *****************************************************************************/
 
-gulp.task('scripts', function(){
+gulp.task('scripts', function() {
     gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
-    .pipe(plumber())
-    .pipe(rename({suffix:'.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
-    .pipe(reload({stream:true}));
+        .pipe(plumber())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'))
+        .pipe(reload({
+            stream: true
+        }));
 });
 
 
@@ -60,7 +74,7 @@ gulp.task('scripts', function(){
  * Watch Tasks
  *****************************************************************************/
 
-gulp.task('watch', function(){
+gulp.task('watch', function() {
     gulp.watch('app/**/*.html', ['html']);
     gulp.watch('app/css/**/*.css', ['css']);
     gulp.watch('app/js/**/*.js', ['scripts']);
