@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PacMan-Test</title>
+		<style media="screen">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			li {
+				display: table-cell;
+				height: 20px;
+				width: 20px;
+				background-color: red;
+			}
+			.brick {
+				background-color: blue
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			var model = {
+				world: [
+					[2, 2, 2, 2, 2, 2, 2, 2],
+					[2, 4, 1, 1, 1, 1, 1, 2],
+					[2, 1, 1, 1, 1, 1, 1, 2],
+					[2, 1, 1, 1, 1, 1, 1, 2],
+					[2, 1, 1, 1, 1, 1, 1, 2],
+					[2, 2, 2, 1, 2, 2, 2, 2],
+				],
+				display: function() {
+					console.log(this.world);
+				},
+			}
+
+			$(document).ready(function(){
+				console.log("jQuery working");
+				model.display();
+				for(var i = 0; i < model.world.length; i++) {
+					$('div.world').append('<ul id="row' + i + '"></ul>');
+					for(var j = 0; j < model.world[i].length; j++) {
+							$('#' + i).append('<li id="col' + j + '"></li>');
+						}
+				}
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="world"></div>
+	</body>
+</html>
