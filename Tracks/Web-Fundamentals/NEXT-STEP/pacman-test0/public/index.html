@@ -21,8 +21,8 @@
 				display: table-cell;
 				/*height: 20px;
 				width: 20px;*/
-				height: 20px;
-				width: 20px;
+				height: 45px;
+				width: 45px;
 				background-color: red;
 			}
 
@@ -34,8 +34,8 @@
 				background: url("image/coin.gif");
 				background-repeat: no-repeat;
 				background-position: center;
-				width: 20px;
-				height: 20px;
+				width: 45px;
+				height: 45px;
 			}
 
 			.pacman {
@@ -45,8 +45,8 @@
 				background-size: cover;
 				/*width: 20px;
 				height: 20px;*/
-				width: 20px;
-				height: 20px;
+				width: 45px;
+				height: 45px;
 				-ms-transform: rotate(0deg);
 				/* IE 9 */
 				-webkit-transform: rotate(0deg);
@@ -58,8 +58,8 @@
 				background-color: black;
 				/*width: 20px;
 				height: 20px;*/
-				width: 20px;
-				height: 20px;
+				width: 45px;
+				height: 45px;
 			}
 
 			.down {
@@ -114,7 +114,6 @@
 				background-repeat: no-repeat;
 			}
 
-
 			.bottombar21 {
 				background-position: -1345px -193px;
 				width: 45px;
@@ -162,7 +161,6 @@
 				transform: rotate(-90deg);
 			}
 
-
 			.vertical-bar-5 {
 				background-position: -913px -193px;
 				width: 45px;
@@ -187,16 +185,17 @@
 			}
 
 			.smalltopright {
-
 				background-position: -865px -147px;
 				width: 45px;
 				height: 45px;
 			}
+
 			.smallbottomleft {
 				background-position: -817px -147px;
 				width: 45px;
 				height: 45px;
 			}
+
 			.smallbottomright {
 				background-position: -769px -147px;
 				width: 45px;
@@ -204,17 +203,13 @@
 			}
 
 			.smalltop {
-
 				background-position: -1px -387px;
-
 				width: 45px;
 				height: 45px;
 			}
 
 			.smallbottom {
-
 				background-position: -1px -435px;
-
 				width: 45px;
 				height: 45px;
 			}
@@ -229,112 +224,23 @@
 			.smallright {
 				/*background-position: -89px -435px;*/
 				background-position: -1197px -145px;
-
 				width: 45px;
 				height: 45px;
 			}
 
-			.redGhost {
-				background: url("image/red-ghost.png");
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-				/*width: 20px;
-				height: 20px;*/
-				width: 20px;
-				height: 20px;
-				-ms-transform: rotate(0deg);
-				/* IE 9 */
-				-webkit-transform: rotate(0deg);
-				/* Chrome, Safari, Opera */
-				transform: rotate(0deg);
-			}
-
-			.pinkGhost {
-				background: url("image/pink-ghost.png");
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-				/*width: 20px;
-				height: 20px;*/
-				width: 20px;
-				height: 20px;
-				-ms-transform: rotate(0deg);
-				/* IE 9 */
-				-webkit-transform: rotate(0deg);
-				/* Chrome, Safari, Opera */
-				transform: rotate(0deg);
-			}
-
-			.blueGhost {
-				background: url("image/blue-ghost.png");
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-				/*width: 20px;
-				height: 20px;*/
-				width: 20px;
-				height: 20px;
-				-ms-transform: rotate(0deg);
-				/* IE 9 */
-				-webkit-transform: rotate(0deg);
-				/* Chrome, Safari, Opera */
-				transform: rotate(0deg);
-			}
-
-
-			.yellowGhost {
-				background: url("image/yellow-ghost.png");
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-				/*width: 20px;
-				height: 20px;*/
-				width: 20px;
-				height: 20px;
-				-ms-transform: rotate(0deg);
-				/* IE 9 */
-				-webkit-transform: rotate(0deg);
-				/* Chrome, Safari, Opera */
-				transform: rotate(0deg);
-			}
-
-
-
-
-
 		</style>
 		<script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
 		<script type="text/javascript">
+			
+
 			var model = {
 				world: [
-					[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-					[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-					[2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2],
-					[2, 1, 2, 0, 0, 2, 1, 2, 0, 0, 0, 2, 1, 2, 1, 2, 0, 0, 0, 2, 1, 2, 0, 0, 2, 1, 2],
-					[2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2],
-					[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-					[2, 1, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 2, 1, 2],
-					[2, 1, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 2, 1, 2],
-					[2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2],
-					[2, 2, 2, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2, 1, 0, 0, 0, 2, 2, 2],
-					[0, 0, 2, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 2, 1, 0, 0, 0, 2, 0, 0],
-					[0, 0, 2, 0, 2, 2, 1, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0, 0, 0, 0, 1, 2, 2, 0, 2, 0, 0],
-					[2, 2, 2, 0, 2, 2, 1, 2, 2, 0, 0, 2, 7, 7, 7, 2, 0, 0, 2, 2, 1, 2, 2, 0, 2, 2, 2],
-					[0, 0, 0, 0, 0, 0, 1, 2, 2, 0, 0, 2, 2, 2, 2, 2, 0, 0, 2, 2, 1, 0, 0, 0, 0, 0, 0],
-					[2, 2, 2, 0, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0, 2, 2, 2],
-					[0, 0, 2, 0, 2, 2, 1, 2, 0, 0, 0, 0, 0, 2, 0, 0, 0 ,0, 0, 2, 1, 2, 2, 0, 2, 0, 0],
-					[2, 2, 2, 0, 0, 0, 1, 2, 2, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 1, 0, 0, 0, 2, 2, 2],
-					[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-					[2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2],
-					[2, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 2],
-					[2, 1, 1, 1, 1, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2],
-					[2, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 2, 2, 2],
-					[0, 1, 1, 1, 1, 1, 1, 2, 0, 0, 2, 2, 1, 2, 1, 2, 2, 0, 0, 2, 1, 1, 1, 1, 1, 1, 0],
-					[2, 1, 2, 2, 2, 2, 1, 2, 0, 0, 2, 2, 1, 2, 1, 2, 2, 0, 0, 2, 1, 2, 2, 2, 2, 1, 2],
-					[2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
-	                [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ,2 ,2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+					[3, 2, 2, 3],
+					[2, 1, 1, 2],
+					[2, 1, 1, 2],
+					[3, 2, 2, 3],
 				],
+
 				display: function() {
 					for (var i = 0; i < this.world.length; i++) {
 						for (var j = i; j < this.world[i]; j++) {
@@ -373,10 +279,10 @@
 
 				pacman: {
 					name: "pacman",
-					x: 19,
-					y: 13,
-					last_x: 19,
-					last_y: 13,
+					x: 1,
+					y: 1,
+					last_x: 1,
+					last_y: 1,
 					rotation: 0,
 					right: 0,
 					left: 180,
@@ -423,74 +329,80 @@
 				}
 			}
 
-
-
 			function displayWorldMap() {
 				for (var i = 0; i < model.world.length; i++) {
 					$('div.world').append('<ul id="row' + i + '"></ul>');
 					for (var j = 0; j < model.world[i].length; j++) {
-						if (model.world[i][j] === 2) {
-							$('#row' + i).append('<li id="col' + j + '" class="brick"></li>');
-						} else if (model.world[i][j] === 1) {
+						if (model.world[i][j] === 1) {
 							$('#row' + i).append('<li id="col' + j + '" class="coin"></li>');
-
-						} else if (model.world[i][j] === 0) {
-							$('#row' + i).append('<li id="col' + j + '" class="empty"></li>');
-							// $("ul#row" + i + ">li#col" + j).removeClass('empty')
-
-						} else if (model.world[i][j] === 4) {
-							$('#row' + i).append('<li id="col' + j + '" class="pacman"></li>');
-							model.world[i][j] = 0;
-						} else if (model.world[i][j] === 3.1) {
-							$('#row' + i).append('<li id="col' + j + '" class="topleft-corner-brick"></li>');
-
-						}	else if (model.world[i][j] === 5) {
+						} else if (model.world[i][j] === 2) {
 							$('#row' + i).append('<li id="col' + j + '" class="vertical-bar-5"></li>');
-
-						} else if (model.world[i][j] === 3.2) {
-							$('#row' + i).append('<li id="col' + j + '" class="bottomleft-corner-brick"></li>');
-
-
-						}else if (model.world[i][j] === 2.1) {
-							$('#row' + i).append('<li id="col' + j + '" class="bottombar21"></li>');
-
-						} else if (model.world[i][j] === 6.1) {
-							$('#row' + i).append('<li id="col' + j + '" class="smalltopleft"></li>');
-
-						} else if (model.world[i][j] === 6.2) {
-							$('#row' + i).append('<li id="col' + j + '" class="smallbottomleft"></li>');
-
-						} else if (model.world[i][j] === 6.3) {
-							$('#row' + i).append('<li id="col' + j + '" class="smalltopright"></li>');
-
-						} else if (model.world[i][j] === 6.4) {
-							$('#row' + i).append('<li id="col' + j + '" class="smallbottomright"></li>');
-
-						} else if (model.world[i][j] === 6.5) {
-							$('#row' + i).append('<li id="col' + j + '" class="smalltop"></li>');
-
-						} else if (model.world[i][j] === 6.6) {
-							$('#row' + i).append('<li id="col' + j + '" class="smallbottom"></li>');
-
-						} else if (model.world[i][j] === 6.7) {
-							$('#row' + i).append('<li id="col' + j + '" class="smallleft"></li>');
-
-						} else if (model.world[i][j] === 6.8) {
-							$('#row' + i).append('<li id="col' + j + '" class="smallright"></li>');
-						}else if (model.world[i][j] === 3.4) {
-							$('#row' + i).append('<li id="col' + j + '" class="bottomright-corner-brick"></li>');
-						}else if (model.world[i][j] === 5.1) {
-							$('#row' + i).append('<li id="col' + j + '" class="smallright"></li>');
-						}else if (model.world[i][j] === 7) {
-							$('#row' + i).append('<li id="col' + j + '" class="redGhost"></li>');
-						} else if (model.world[i][j] === 8) {
-							$('#row' + i).append('<li id="col' + j + '" class="pinkGhost"></li>');
-						}
-						else if (model.world[i][j] === 9) {
-							$('#row' + i).append('<li id="col' + j + '" class="blueGhost"></li>');
 						}
 					}
 				}
+
+
+
+				// function displayWorldMap() {
+				// 	for (var i = 0; i < model.world.length; i++) {
+				// 		$('div.world').append('<ul id="row' + i + '"></ul>');
+				// 		for (var j = 0; j < model.world[i].length; j++) {
+				// 			if (model.world[i][j] === 2) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="num1"></li>');
+				// 			} else if (model.world[i][j] === 1) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="coin"></li>');
+				//
+				// 			} else if (model.world[i][j] === 0) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="empty"></li>');
+				// 				// $("ul#row" + i + ">li#col" + j).removeClass('empty')
+				//
+				// 			} else if (model.world[i][j] === 4) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="pacman"></li>');
+				// 				model.world[i][j] = 0;
+				// 			} else if (model.world[i][j] === 3.1) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="topleft-corner-brick"></li>');
+				//
+				// 			}	else if (model.world[i][j] === 5) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="vertical-bar-5"></li>');
+				//
+				// 			} else if (model.world[i][j] === 3.2) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="bottomleft-corner-brick"></li>');
+				//
+				//
+				// 			}else if (model.world[i][j] === 2.1) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="bottombar21"></li>');
+				//
+				// 			} else if (model.world[i][j] === 6.1) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smalltopleft"></li>');
+				//
+				// 			} else if (model.world[i][j] === 6.2) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smallbottomleft"></li>');
+				//
+				// 			} else if (model.world[i][j] === 6.3) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smalltopright"></li>');
+				//
+				// 			} else if (model.world[i][j] === 6.4) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smallbottomright"></li>');
+				//
+				// 			} else if (model.world[i][j] === 6.5) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smalltop"></li>');
+				//
+				// 			} else if (model.world[i][j] === 6.6) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smallbottom"></li>');
+				//
+				// 			} else if (model.world[i][j] === 6.7) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smallleft"></li>');
+				//
+				// 			} else if (model.world[i][j] === 6.8) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smallright"></li>');
+				// 			}else if (model.world[i][j] === 3.4) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="bottomright-corner-brick"></li>');
+				// 			}else if (model.world[i][j] === 5.1) {
+				// 				$('#row' + i).append('<li id="col' + j + '" class="smallright"></li>');
+				// 			}
+				// 		}
+				// 	}
+				// }
 			}
 
 			$(document).ready(function() {
