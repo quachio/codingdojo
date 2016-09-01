@@ -1,0 +1,287 @@
+/*# sourceMappingURL=../maps/style.css.map */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: table-cell;
+    /*height: 20px;
+    width: 20px;*/
+    height: 20px;
+    width: 20px;
+    background-color: red;
+}
+
+.brick {
+    background-color: blue;
+}
+
+.coin {
+    background: url("../image/coin.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+
+.pacman {
+    background: url("../image/pacman.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*width: 20px;
+    height: 20px;*/
+    width: 20px;
+    height: 20px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.empty {
+    background-color: black;
+    /*width: 20px;
+    height: 20px;*/
+    width: 20px;
+    height: 20px;
+}
+
+.down {
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.left {
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(180deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.up {
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+}
+
+.right {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.num0,
+.num1,
+.topleft-corner-brick,
+.vertical-bar-5,
+.bottomleft-corner-brick,
+.bottombar21,
+.smalltop,
+.smalltopleft,
+.smalltopright,
+.smallbottomright,
+.smallbottomleft,
+.smallbottom,
+.smallleft,
+.smallright,
+.bottomright-corner-brick,
+.smallright {
+    background: url('../image/pacman-sprite.png');
+    background-repeat: no-repeat;
+}
+
+.bottombar21 {
+    background-position: -1345px -193px;
+    width: 45px;
+    height: 45px;
+}
+
+.num0 {
+    background-position: -817px -193px;
+    width: 45px;
+    height: 45px;
+}
+
+.num0 {
+    background-position: -817px -193px;
+    width: 45px;
+    height: 45px;
+}
+
+.num1 {
+    background-position: -1249px -193px;
+    width: 45px;
+    height: 45px;
+}
+
+.topleft-corner-brick {
+    background-position: -817px -193px;
+    width: 45px;
+    height: 45px;
+}
+
+.bottomleft-corner-brick {
+    background-position: -1009px -193px;
+    width: 45px;
+    height: 45px;
+}
+
+.bottomright-corner-brick {
+    background-position: -1010px -193px;
+    width: 45px;
+    height: 45px;
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+
+.vertical-bar-5 {
+    background-position: -913px -193px;
+    width: 45px;
+    height: 45px;
+}
+
+.smalltopleft {
+    background-position: -913px -147px;
+    width: 45px;
+    height: 45px;
+}
+
+.smallright {
+    background-position: -913px -193px;
+    width: 45px;
+    height: 45px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.smalltopright {
+    background-position: -865px -147px;
+    width: 45px;
+    height: 45px;
+}
+
+.smallbottomleft {
+    background-position: -817px -147px;
+    width: 45px;
+    height: 45px;
+}
+
+.smallbottomright {
+    background-position: -769px -147px;
+    width: 45px;
+    height: 45px;
+}
+
+.smalltop {
+    background-position: -1px -387px;
+    width: 45px;
+    height: 45px;
+}
+
+.smallbottom {
+    background-position: -1px -435px;
+    width: 45px;
+    height: 45px;
+}
+
+.smallleft {
+    /*background-position: -144px -435px;*/
+    background-position: -1161px -145px;
+    width: 45px;
+    height: 45px;
+}
+
+.smallright {
+    /*background-position: -89px -435px;*/
+    background-position: -1197px -145px;
+    width: 45px;
+    height: 45px;
+}
+
+.redGhost {
+    background: url("../image/red-ghost.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*width: 20px;
+    height: 20px;*/
+    width: 20px;
+    height: 20px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.pinkGhost {
+    background: url("../image/pink-ghost.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*width: 20px;
+    height: 20px;*/
+    width: 20px;
+    height: 20px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.blueGhost {
+    background: url("../image/blue-ghost.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*width: 20px;
+    height: 20px;*/
+    width: 20px;
+    height: 20px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+.yellowGhost {
+    background: url("../image/yellow-ghost.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*width: 20px;
+    height: 20px;*/
+    width: 20px;
+    height: 20px;
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
