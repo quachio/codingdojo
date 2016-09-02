@@ -27,6 +27,7 @@ var model = {
         [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
         [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
     ],
+
     updateMove: function(direction) {
         // console.log("updateMove");
 
@@ -48,6 +49,13 @@ var model = {
 
 
         if (model.world[model.move.next.x][model.move.next.y] === model.coin || model.world[model.move.next.x][model.move.next.y] === model.empty) {
+
+
+            if(model.world[model.move.next.x][model.move.next.y] === model.coin) {
+                count--;
+                model.world[model.move.next.x][model.move.next.y] = 0;
+            }
+
             // console.log('coin', 'pacman old location', model.pacman.x, model.pacman.y);
             $("ul#row" + model.move.prev.x + ">li#col" + model.move.prev.y).removeClass('pacman').addClass('empty').removeAttr('style');
             model.pacman.x += direction.x;
@@ -272,9 +280,9 @@ function printWorldMap() {
 }
 
 
+var count = 0;
 
-
-function displayWorldMap() {
+function displayWorldMap(runpacman) {
     for (var i = 0; i < model.world.length; i++) {
         $('div.world').append('<ul id="row' + i + '"></ul>');
         for (var j = 0; j < model.world[i].length; j++) {
@@ -282,7 +290,7 @@ function displayWorldMap() {
                 $('#row' + i).append('<li id="col' + j + '" class="brick"></li>');
             } else if (model.world[i][j] === 1) {
                 $('#row' + i).append('<li id="col' + j + '" class="coin"></li>');
-
+                count++;
             } else if (model.world[i][j] === 0) {
                 $('#row' + i).append('<li id="col' + j + '" class="empty"></li>');
                 // $("ul#row" + i + ">li#col" + j).removeClass('empty')
@@ -346,33 +354,151 @@ function displayWorldMap() {
 }
 
 
+
+function myTimer() {
+    var direction = Math.floor((Math.random() * 4) + 1);
+    switch (direction) {
+    case 1: // Key left.
+        model.pacman.go(model.left);
+        model.pacman.moveleft();
+        model.updateMove(model.left);
+        break;
+    case 2: // Key up.
+        model.pacman.go(model.up);
+        model.pacman.moveUp();
+        model.updateMove(model.up);
+        break;
+    case 3: // Key right.
+        model.pacman.go(model.right);
+        model.pacman.moveRight();
+        model.updateMove(model.right);
+        break;
+    case 4: // Key down
+        model.pacman.go(model.down);
+        model.pacman.moveDown();
+        model.updateMove(model.down);
+        break;
+    }
+}
+
+function pacMoveRight() {
+    model.pacman.go(model.right);
+    model.pacman.moveRight();
+    model.updateMove(model.right);
+}
+
+function pacMoveLeft() {
+    model.pacman.go(model.left);
+    model.pacman.moveleft();
+    model.updateMove(model.left);
+}
+
+function pacMoveDown() {
+    model.pacman.go(model.down);
+    model.pacman.moveDown();
+    model.updateMove(model.down);
+}
+
+function pacMoveUp() {
+    model.pacman.go(model.up);
+    model.pacman.moveUp();
+    model.updateMove(model.up);
+}
+
 $(document).ready(function() {
     console.log("jQuery working");
     displayWorldMap();
+
+    $("button").click(function(){
+
+        var myVar = setInterval(myTimer, 100);
+    });
+
+    // while(count !== 0) {
+    //     var direction =  Math.floor((Math.random() * 4) + 1);
+    //     switch (direction) {
+    //         case 1: // Key left.
+    //             model.pacman.go(model.left);
+    //             model.pacman.moveleft();
+    //             model.updateMove(model.left);
+    //             break;
+    //         case 2: // Key up.
+    //             model.pacman.go(model.up);
+    //             model.pacman.moveUp();
+    //             model.updateMove(model.up);
+    //             break;
+    //         case 3: // Key right.
+    //             model.pacman.go(model.right);
+    //             model.pacman.moveRight();
+    //             model.updateMove(model.right);
+    //             break;
+    //         case 4: // Key down
+    //             model.pacman.go(model.down);
+    //             model.pacman.moveDown();
+    //             model.updateMove(model.down);
+    //             break;
+    //     }
+    // }
+    //
+    //
+
+    // for(var i = 0; i < 1000; i++) {
+    //     var direction = Math.floor((Math.random() * 4) + 1);
+    //     switch (direction) {
+    //     case 1: // Key left.
+    //         model.pacman.go(model.left);
+    //         model.pacman.moveleft();
+    //         model.updateMove(model.left);
+    //         break;
+    //     case 2: // Key up.
+    //         model.pacman.go(model.up);
+    //         model.pacman.moveUp();
+    //         model.updateMove(model.up);
+    //         break;
+    //     case 3: // Key right.
+    //         model.pacman.go(model.right);
+    //         model.pacman.moveRight();
+    //         model.updateMove(model.right);
+    //         break;
+    //     case 4: // Key down
+    //         model.pacman.go(model.down);
+    //         model.pacman.moveDown();
+    //         model.updateMove(model.down);
+    //         break;
+    //     }
+    // }
+
 
     $(this).keydown(function(event) {
         var key = event.which;
         // console.log(key);
         switch (key) {
             case 37: // Key left.
-                model.pacman.go(model.left);
-                model.pacman.moveleft();
-                model.updateMove(model.left);
+            var t = setInterval(pacMoveLeft, 70);
+
+                // model.pacman.go(model.left);
+                // model.pacman.moveleft();
+                // model.updateMove(model.left);
                 break;
             case 38: // Key up.
-                model.pacman.go(model.up);
-                model.pacman.moveUp();
-                model.updateMove(model.up);
+            t = setInterval(pacMoveUp, 70);
+
+                // model.pacman.go(model.up);
+                // model.pacman.moveUp();
+                // model.updateMove(model.up);
                 break;
             case 39: // Key right.
-                model.pacman.go(model.right);
-                model.pacman.moveRight();
-                model.updateMove(model.right);
+            t= setInterval(pacMoveRight, 70);
+                // model.pacman.go(model.right);
+                // model.pacman.moveRight();
+                // model.updateMove(model.right);
                 break;
             case 40: // Key down
-                model.pacman.go(model.down);
-                model.pacman.moveDown();
-                model.updateMove(model.down);
+            t = setInterval(pacMoveDown, 70);
+
+                // model.pacman.go(model.down);
+                // model.pacman.moveDown();
+                // model.updateMove(model.down);
                 break;
         }
     });
